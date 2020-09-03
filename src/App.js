@@ -1,6 +1,7 @@
 import React, {Component} from "react"; 
 import './css/App.css'; 
 import BookList from "./BookList"
+import BookForm from "./BookForm"
 
 const genres = [
 	{value: 'fantasy', label: "Fantasy"}, 
@@ -25,8 +26,11 @@ class App extends Component {
 		return (
 			<div className = "App">
 				<h1>
-				Books 
+					Books 
 				</h1>
+				<div>
+					<BookForm genres={genres} />
+				</div>
 				<div>
 					<BookList books={books} genres={genres}/>
 				</div>
